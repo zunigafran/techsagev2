@@ -16,7 +16,7 @@ export default function WorkHistoryAccordion() {
 
   return (
     <>    
-    <div className="w-full max-w-4xl mx-auto p-8 min-h-screen">
+    <div className="w-full max-w-4xl mx-auto min-h-screen md:p-8">
       <h1 className="text-4xl font-bold mb-8">Work History</h1>
       
       <Accordion 
@@ -36,7 +36,7 @@ export default function WorkHistoryAccordion() {
             >
               <div className="relative" id="white-line">
                 {/* Vertical line container - positioned 8px below the dot */}
-                <div className="absolute left-[4px] w-px bg-primary overflow-hidden" style={{ top: '40px', bottom: 0 }}>
+                <div className="absolute left-[4px] w-[4px] bg-primary overflow-hidden" style={{ top: '40px', bottom: 0 }}>
                   <div 
                     className={`w-full bg-primary transition-all duration-500 ease-out ${
                       isOpen ? 'h-full opacity-100' : 'h-8 opacity-30'

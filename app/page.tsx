@@ -7,16 +7,16 @@ import Footer from './ui/footer'
 
 function home() {
   return (
-    <div className="flex flex-col min-h-screen m-24">
+    <div className="flex flex-col min-h-screen m-8 lg:m-24">
       <div>
         <Hero />
       </div>
-      <div className="items-center justify-center text-center">
+      <div className=" text-center justify-items-center">
         <Competencies />
         <Projects />
         <Resume />
       </div>
-      <div className="items-center justify-center text-center">
+      <div className="text-center justify-items-center">
         <Footer />
       </div>
     </div>
