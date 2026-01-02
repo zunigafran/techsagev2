@@ -240,6 +240,28 @@
   opacity: 0.75;
 }
 
+.underline-center {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.underline-center::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.underline-center:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 @keyframes rotate-gradient {
   0% {
     filter: hue-rotate(0deg);
@@ -305,9 +327,7 @@
 
 .page-container {
   margin: 2rem 1rem;
-  padding: 0 1rem;
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding: 0 1rem 0 1rem;
   gap: 2rem;
 }
 
@@ -339,6 +359,8 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
+    height: 77.5vh; /* occupies 80% of viewport height, adjust as needed */
+    box-sizing: border-box;
   }
 }
 

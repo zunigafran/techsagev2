@@ -46,7 +46,7 @@ export const projectData: projectData[] = [
         github: "",
         image: "/projects/tanium_document.png",
         alt: "Tanium Document",
-        technologies: ["Notion", "Word", ],
+        technologies: ["Notion", "Word", "Spark"],
     },  
     {
         id: "portfolio-site",
@@ -58,7 +58,7 @@ export const projectData: projectData[] = [
         github: "https://github.com/zunigafran/zfran/tree/main/src",
         image: "/projects/techsagev1.jpeg",
         alt: "Previous Portfolio Site",
-        technologies: ["NextJS", "TailwindCSS", "JavaScript", "Vercel"],
+        technologies: ["NextJS", "TailwindCSS", "JavaScript", "Claude", "Vercel"],
     }
 ]
 

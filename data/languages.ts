@@ -60,6 +60,12 @@ export const languages: Record<string, languages> = {
         color: "hsl(var(--primary))",
         alt: "Python"
     },
+    "spark": {
+        id: "spark",
+        logo: "/logos/spark.svg",
+        color: "hsl(var(--primary))",
+        alt: "Spark"
+    },
     "tailwind": {
         id: "tailwind",
         logo: "/logos/tailwind.svg",

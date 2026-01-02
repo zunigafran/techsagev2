@@ -11,7 +11,7 @@ const Competencies = () => {
         {/* Comp 1 */}
         <div className="relative md:col-span-1">
           <div className="absolute color1" />
-          <Card className="w-full h-full grid content-center transition duration-500 py-16 hover:scale-110">
+          <Card className="w-full h-full grid content-center transition duration-500 hover:scale-110">
             <CardHeader>
               <CardTitle>Cloud Infrastructure & Security</CardTitle>
             </CardHeader>
@@ -26,7 +26,7 @@ const Competencies = () => {
         {/* Comp 2 */}  
         <div className="relative">
           <div className="absolute color2" />
-          <Card className="w-full h-full grid content-center transition duration-500 py-16 hover:scale-110">
+          <Card className="w-full h-full grid content-center transition duration-500 hover:scale-110">
             <CardHeader>
               <CardTitle>Full-Stack Software Development</CardTitle>
             </CardHeader>
@@ -41,7 +41,7 @@ const Competencies = () => {
         {/* Comp 3 */}
         <div className="relative">
           <div className="absolute color3" />
-          <Card className="w-full h-full grid content-center transition duration-500 py-16 hover:scale-110">
+          <Card className="w-full h-full grid content-center transition duration-500 hover:scale-110">
             <CardHeader>
               <CardTitle>Cross-Functional Leadership & Collaboration</CardTitle>
             </CardHeader>
@@ -56,7 +56,7 @@ const Competencies = () => {
         {/* Comp 4 */}
         <div className="relative">
           <div className="absolute color4" />
-          <Card className="w-full h-full grid content-center transition duration-500 py-16 hover:scale-110">
+          <Card className="w-full h-full grid content-center transition duration-500 hover:scale-110">
             <CardHeader>
               <CardTitle>Intelligence & Analytical Problem-Solving</CardTitle>
             </CardHeader>
