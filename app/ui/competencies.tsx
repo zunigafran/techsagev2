@@ -3,8 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 const Competencies = () => {
   return (
     <>
+    <div className="py-24">
       <div>
-        <h1 className="text-4xl font-bold py-4">My Competencies</h1>
+        <h1 className="text-4xl font-bold py-12">My Competencies</h1>
       </div>
 
       <div className="container">
@@ -67,6 +68,7 @@ const Competencies = () => {
             </CardContent>
           </Card>
         </div>
+      </div>
       </div>
     </>
   )

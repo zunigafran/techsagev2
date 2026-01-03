@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <>
       <div>
-        <h1 className="text-4xl font-bold py-4">My Projects</h1>
+        <h1 className="text-4xl font-bold py-8">My Projects</h1>
       </div>
       <div className="container">
         {projectData.map((project) => (
