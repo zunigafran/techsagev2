@@ -72,6 +72,12 @@ export const languages: Record<string, languages> = {
         color: "hsl(var(--primary))",
         alt: "Tailwind"
     },
+    "tailwindcss": {
+        id: "tailwindcss",
+        logo: "/logos/tailwind.svg",
+        color: "hsl(var(--primary))",
+        alt: "TailwindCSS"
+    },
     "typescript": {
         id: "typescript",
         logo: "/logos/typescript.svg",
