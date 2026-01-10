@@ -54,7 +54,7 @@ export const projectData: projectData[] = [
         purpose: "Web Development",
         summary: "A portfolio website demonstrating my ability to create innovative solutions for real-world problems, highlighting my engineering projects and technical capabilities.",
         status: "Completed",
-        url: "https://github.com/zunigafran/zfran/tree/main/src",
+        url: "https://previousts.vercel.app",
         github: "https://github.com/zunigafran/zfran/tree/main/src",
         image: "/projects/techsagev1.jpeg",
         alt: "Previous Portfolio Site",

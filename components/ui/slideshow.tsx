@@ -22,7 +22,7 @@ export default function Slideshow({ job, logoClassName, imageClassName }: Slides
     job.image4,
   ].filter(img => img && img.trim() !== '');
 
-  // Auto-advance slideshow every 4 seconds
+  // Auto-advance slideshow every 7.5 seconds
   useEffect(() => {
     if (images.length <= 1) return;
 

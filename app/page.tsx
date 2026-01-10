@@ -6,7 +6,7 @@ import Footer from './ui/footer'
 
 function home() {
   return (
-    <div className="flex flex-col min-h-screen m-8 gap-12 lg:m-24">
+    <div className="flex flex-col min-h-screen m-4 gap-12 lg:m-24">
       <div>
         <Hero />
       </div>

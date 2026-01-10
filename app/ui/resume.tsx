@@ -19,7 +19,7 @@ export default function WorkHistoryAccordion() {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto min-h-screen md:p-8">
+    <div className="w-full max-w-4xl mx-auto p-8 md:pb-16">
       <h1 className="text-4xl font-bold m-12">Work History</h1>
       
       <Accordion type="multiple" className="w-full space-y-4" value={openItems} onValueChange={setOpenItems}>
@@ -71,12 +71,12 @@ export default function WorkHistoryAccordion() {
                     )}
                   </div>
                   <div className="flex flex-wrap gap-2 text-sm col-span-5 row-span-1 h-fit md:col-span-2 md:row-span-2">
-                  {job.technologies.map((tech, index) => (
+                  {job.skills.map((skills, index) => (
                       <span
                         key={index}
                         className="text-sm bg-blue-600 rounded-full px-4 py-1.5 drop-shadow-lg text-center text-secondary font-semibold"
                       >
-                        {tech}
+                        {skills}
                       </span>
                     ))}
                   </div>

@@ -6,6 +6,8 @@ import Image from "next/image";
 import BackButton from "@/components/ui/backbutton";
 import { Card } from "@/components/ui/card";
 import { Metadata } from "next";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkIcon from '@mui/icons-material/Link';
 
 export async function generateMetadata({
   params,
@@ -93,15 +95,24 @@ const nextProject = currentIndex < projectData.length - 1
                 })}
               </div>
             )}
-            <div className="py-4 gap-2 flex flex-col">
-            <Link href={project?.url} target="_blank" className="text-2xl font-normal flex gap-2 place-items-center hover:text-teal-400 hover:scale-110 transition-all duration-300">
-              Open Project
-              <Image src="/logos/link.svg" alt="Link" width={48} height={48} className="w-10 h-10" /></Link>
-              <Link href={project?.github} target="_blank" className="text-2xl font-normal flex gap-2 place-items-center hover:text-teal-400 hover:scale-110 transition-all duration-300">
-              GitHub
-              <Image src="/logos/github.svg" alt="GitHub" width={48} height={48} className="w-10 h-10" />
-              </Link>
+            {/* Project Links */}
+            {((project?.url && project.url.trim()) || (project?.github && project.github.trim())) && (
+              <div className="py-4 gap-2 flex flex-col">
+                <h1 className="text-xl font-semibold underline underline-offset-8">Project Links</h1>
+                {project?.url && project.url.trim() && (
+                  <Link href={project.url} target="_blank" className="text-2xl font-normal flex gap-2 place-items-center hover:text-teal-600 hover:underline underline-center w-fit h-fit">
+                    Open Project
+                    <LinkIcon fontSize="large" className="ml-2" />
+                  </Link>
+                )}
+                {project?.github && project.github.trim() && (
+                  <Link href={project.github} target="_blank" className="text-2xl font-normal flex flex-row gap-2 place-items-center hover:text-teal-600 hover:underline underline-center w-fit h-fit">
+                    GitHub
+                    <GitHubIcon fontSize="large" className="ml-2" />
+                  </Link>
+                )}
               </div>
+            )}
             </div>
             {project?.image && project.image.trim() !== "" && (
               <Image src={project.image} alt={project?.alt || project?.name || "Project image"} width={1000} height={1000} className="object-cover object-top col-span-2" />
