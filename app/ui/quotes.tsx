@@ -29,11 +29,11 @@ const Quotes = () => {
 
   return (
     <div 
-      className="transition-opacity duration-500 grid grid-rows-3 h-full pt-4" 
+      className="transition-opacity duration-500 h-full pt-4" 
       style={{ opacity: opacity / 100 }}
     >
-      <p className="text-2xl italic row-span-2">&rdquo;{currentQuote.quote}&rdquo;</p>
-      <p className="text-2xl row-span-1">{currentQuote.author}</p>
+      <p className="text-2xl italic pb-4">&rdquo;{currentQuote.quote}&rdquo;</p>
+      <p className="text-2xl">{currentQuote.author}</p>
     </div>
   )
 }

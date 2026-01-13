@@ -1,7 +1,11 @@
 
-const Hero = () => {
+interface HeroProps {
+  id?: string;
+}
+
+const Hero = ({ id }: HeroProps) => {
   return (
-    <div className="py-32 content-start">
+    <div id={id} className="py-32 content-start">
       <h1 className="text-4xl font-bold text-center md:text-8xl md:text-left">
         Francisco Zuniga
       </h1>

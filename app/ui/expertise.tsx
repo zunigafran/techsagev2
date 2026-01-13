@@ -1,11 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-const Competencies = () => {
+interface ExpertiseProps {
+  id?: string;
+}
+
+const Expertise = ({ id }: ExpertiseProps) => {
   return (
     <>
-    <div className="py-24">
+    <div id={id} className="py-24">
       <div>
-        <h1 className="text-4xl font-bold py-12">My Competencies</h1>
+        <h1 className="text-4xl font-bold py-12">My Expertise</h1>
       </div>
 
       <div className="container">
@@ -74,4 +78,4 @@ const Competencies = () => {
   )
 }
 
-export default Competencies
+export default Expertise

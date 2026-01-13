@@ -7,7 +7,11 @@ import TealDot from '@/components/ui/tealdot';
 import { resumeData } from '@/data/resumeData';
 import Slideshow from '@/components/ui/slideshow';
 
-export default function WorkHistoryAccordion() {
+interface WorkHistoryAccordionProps {
+  id?: string;
+}
+
+export default function WorkHistoryAccordion({ id }: WorkHistoryAccordionProps) {
   const [openItems, setOpenItems] = useState<string[]>([]);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -19,7 +23,7 @@ export default function WorkHistoryAccordion() {
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-8 md:pb-16">
+    <div id={id} className="w-full max-w-4xl mx-auto p-8 md:pb-16">
       <h1 className="text-4xl font-bold m-12">Work History</h1>
       
       <Accordion type="multiple" className="w-full space-y-4" value={openItems} onValueChange={setOpenItems}>

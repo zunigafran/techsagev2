@@ -1,3 +1,5 @@
+'use client';
+
 import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import Quotes from "./quotes"
@@ -7,14 +9,18 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 
-const Footer = () => {
+interface FooterProps {
+  id?: string;
+}
+
+const Footer = ({ id }: FooterProps) => {
   return (
-   <>
+   <div id={id}>
    {/* Desktop */}
     <div className="box-border max-w-full hidden md:block">
-      <Card className="grid justify-between p-8 md:grid-cols-3 gap-6">
+      <Card className="grid justify-between p-8 md:grid-cols-3 gap-6 items-stretch">
         {/* Left Side */}
-        <div className="col-span-2 relative">
+        <div className="col-span-2 relative min-h-[200px]">
           <div className="pb-4 text-left absolute bottom-0">
             <h1 className="text-2xl font-bold md:text-5xl">
               Got an opportunity available?
@@ -26,41 +32,38 @@ const Footer = () => {
         </div>
 
         {/* Right Side - Contact Links */}
-        <div className="col-span-1 text-right mr-16">
-          <div className="pb-4">
+        <div className="col-span-1 text-right mr-16 flex flex-col justify-end h-full">
+          <div>
             <div className="pb-4 flex flex-col text-right">
-              <p className="text-xl">Here&apos;s how to get in touch with me:</p>
+              <p className="text-2xl">Here&apos;s how to get in touch with me:</p>
             </div>
             <div className="pb-4 flex flex-col items-end gap-2">
-              <Link href="mailto:fzuniga325@gmail.com" className="text-xl w-1/3 flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit">
-                <EmailIcon />
+              <Link href="mailto:fzuniga325@gmail.com" 
+                className="text-2xl flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit">
+                <EmailIcon className="mr-2" fontSize="large"/>
                 Email
               </Link>
               <Link
                 href="https://www.linkedin.com/in/zunigafran/"
-                className="text-xl w-1/3 flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit"
+                className="text-2xl flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit"
               >
-                <LinkedInIcon />
+                <LinkedInIcon className="mr-2" fontSize="large"/>
                 LinkedIn
               </Link>
               <Link
                 href="https://github.com/zunigafran"
-                className="text-xl w-1/3 flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit"
+                className="text-2xl flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit"
               >
-                <GitHubIcon />
+                <GitHubIcon className="mr-2" fontSize="large"/>
                 GitHub
               </Link>
-              <Link href="/contact" className="text-xl w-1/3 flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit">
-               <ContactPageIcon />
+              <Link href="/contact" className="text-2xl flex items-center justify-end hover:text-teal-600 hover:underline underline-center w-fit h-fit">
+               <ContactPageIcon className="mr-2" fontSize="large" />
                 Contact
               </Link>
             </div>
           <Quotes />
           </div>
-        </div>
-
-        {/* Quotes */}
-        <div className="hidden md:block">
         </div>
       </Card>
     </div>
@@ -101,7 +104,7 @@ const Footer = () => {
         </div>
       </Card>
     </div>
-    </>
+    </div>
   )
 }
 

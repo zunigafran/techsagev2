@@ -3,10 +3,14 @@ import { projectData } from "@/data/projectData";
 import Image from "next/image";
 import Link from "next/link";
 
-const Projects = () => {
+interface ProjectsProps {
+  id?: string;
+}
+
+const Projects = ({ id }: ProjectsProps) => {
   return (
     <>
-      <div>
+      <div id={id}>
         <h1 className="text-4xl font-bold py-8">My Projects</h1>
       </div>
       <div className="proj-container container">
