@@ -18,11 +18,11 @@ export const projectData: projectData[] = [
         purpose: "Web Development",
         summary: "A redone and revamped portfolio website showcasing my ongoing journey of technology development and mastery, featuring projects that address practical real-world challenges.",
         status: "Completed",
-        url: "",
+        url: "https://www.techsage.software",
         github: "https://github.com/zunigafran/techsagev2",
         image: "",
         alt: "Portfolio Site V2",
-        technologies: [],
+        technologies: ["NextJS", "TypeScript", "Cursor", "Claude", "Vercel"],
     }, 
     {
        id: "lode",
@@ -34,7 +34,7 @@ export const projectData: projectData[] = [
        url: "",
        image: "",
        alt: "Lode",
-       technologies: [],
+       technologies: ["Figma", "Expo", "TypeScript", "Cursor", "Claude"], //Supabase,
    },
    {
         id: "tanium-document",
@@ -58,7 +58,7 @@ export const projectData: projectData[] = [
         github: "https://github.com/zunigafran/zfran/tree/main/src",
         image: "/projects/techsagev1.jpeg",
         alt: "Previous Portfolio Site",
-        technologies: ["NextJS", "TailwindCSS", "JavaScript", "Claude", "Vercel"],
+        technologies: ["NextJS", "JavaScript", "Claude", "Vercel"],
     }
 ]
 

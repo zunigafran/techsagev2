@@ -30,6 +30,12 @@ export const languages: Record<string, languages> = {
         color: "hsl(var(--primary))",
         alt: "Expo"
     },
+    "figma": {
+        id: "figma",
+        logo: "/logos/figma.svg",
+        color: "hsl(var(--primary))",
+        alt: "Figma"
+    },
     "javascript": {
         id: "javascript",
         logo: "/logos/javascript.svg",
@@ -60,6 +66,12 @@ export const languages: Record<string, languages> = {
         color: "hsl(var(--primary))",
         alt: "Python"
     },
+    "supabase": {
+        id: "supabase",
+        logo: "/logos/supabase.svg",
+        color: "hsl(var(--primary))",
+        alt: "Supabase"
+    },
     "spark": {
         id: "spark",
         logo: "/logos/spark.svg",
@@ -71,12 +83,6 @@ export const languages: Record<string, languages> = {
         logo: "/logos/tailwind.svg",
         color: "hsl(var(--primary))",
         alt: "Tailwind"
-    },
-    "tailwindcss": {
-        id: "tailwindcss",
-        logo: "/logos/tailwind.svg",
-        color: "hsl(var(--primary))",
-        alt: "TailwindCSS"
     },
     "typescript": {
         id: "typescript",

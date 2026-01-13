@@ -1,10 +1,10 @@
-import { Loader2Icon } from "lucide-react"
+import RefreshIcon from '@mui/icons-material/Refresh';
 
 import { cn } from "@/lib/utils"
 
-function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
+function Spinner({ className, ...props }: React.ComponentProps<typeof RefreshIcon>) {
   return (
-    <Loader2Icon
+    <RefreshIcon
       role="status"
       aria-label="Loading"
       className={cn("size-4 animate-spin", className)}

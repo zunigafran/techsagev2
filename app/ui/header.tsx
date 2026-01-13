@@ -20,7 +20,7 @@ export default function Header({ id }: HeaderProps) {
   </section>
   <section>
     <Button asChild variant="default">
-      <Link href="/resume/Francisco Zuniga.pdf" className="text-xl font-normal font-mono">Resume</Link>
+      <a href="/resume/Francisco Zuniga.pdf" download="Francisco Zuniga.pdf" className="text-xl font-normal font-mono">Resume</a>
     </Button>
   </section>
 </div>
