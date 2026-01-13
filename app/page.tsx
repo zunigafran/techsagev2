@@ -1,3 +1,4 @@
+import SideNav from './ui/dashboard/sidenav'
 import Header from './ui/header'
 import Nav from './ui/nav'
 import Hero from './ui/hero'
@@ -9,6 +10,7 @@ import Footer from './ui/footer'
 function home() {
   return (
     <>
+    <SideNav id="sideNav" />
     <Header id="header" />
     <div className="flex flex-col min-h-screen m-4 gap-12 lg:m-24">
       <div>
