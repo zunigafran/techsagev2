@@ -17,7 +17,7 @@ interface Particle {
 export function Waves() {
   const canvasRef = React.useRef<HTMLCanvasElement>(null)
   const { theme } = useTheme()
-  const animationFrameRef = React.useRef<number>()
+  const animationFrameRef = React.useRef<number | undefined>(undefined)
   const timeRef = React.useRef(0)
   const particlesRef = React.useRef<Particle[]>([])
   const mountedRef = React.useRef(false)
