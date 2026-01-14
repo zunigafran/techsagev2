@@ -29,7 +29,7 @@ const Projects = ({ id }: ProjectsProps) => {
               className="object-cover object-top w-full h-full absolute inset-0 z-0"
               />
             )}
-            <CardContent className="mt-auto flex flex-col gap-2 text-start z-10 relative bg-card p-4 h-2/3 translate-y-1/3 opacity-95 md:h-1/3">
+            <CardContent className="mt-auto flex flex-col gap-1 text-start z-10 relative bg-card p-4 h-2/3 translate-y-1/2 opacity-95 md:h-2/3">
               <h1 className="text-md font-bold w-full text-primary md:text-xl">
                 {project.name}
               </h1>

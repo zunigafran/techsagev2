@@ -12,6 +12,7 @@ import {
   SheetClose,
 } from '@/components/ui/sheet';
 import MenuIcon from '@mui/icons-material/Menu';
+import { ModeToggle } from '@/components/ui/modetoggle';
 
 interface SideNavProps {
   id?: string;
@@ -79,9 +80,9 @@ export default function SideNav({ id }: SideNavProps) {
               </a>
             </SheetClose>
 
-            <div className="pt-4 border-t flex justify-center items-center">
+            <div className="pt-4 w-full pl-8 border-t flex items-center gap-4">
               <SheetClose asChild>
-                <Button asChild variant="default" className="w-1/2 font-mono text-center mx-auto">
+                <Button asChild variant="default" className="font-mono w-1/2">
                   <a
                     href="/resume/Francisco Zuniga.pdf"
                     download="Francisco Zuniga.pdf"
@@ -91,6 +92,7 @@ export default function SideNav({ id }: SideNavProps) {
                   </a>
                 </Button>
               </SheetClose>
+              <ModeToggle />
             </div>
           </nav>
         </SheetContent>

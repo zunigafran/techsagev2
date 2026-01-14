@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/modetoggle";
 import Link from "next/link";
 
 interface HeaderProps {
@@ -18,10 +19,11 @@ export default function Header({ id }: HeaderProps) {
     <a href="#projects" className="text-lg font-normal font-mono">Projects</a>
     <a href="#resume" className="text-lg font-normal font-mono">Experience</a>
   </section>
-  <section>
+  <section className="flex flex-row justify-between gap-4 items-center">
     <Button asChild variant="default">
       <a href="/resume/Francisco Zuniga.pdf" download="Francisco Zuniga.pdf" className="text-xl font-normal font-mono">Resume</a>
     </Button>
+    <ModeToggle />
   </section>
 </div>
   )
