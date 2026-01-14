@@ -43,7 +43,7 @@ export function Waves() {
       for (let i = 0; i < 80; i++) {
         particlesRef.current.push({
           x: Math.random() * canvas.width,
-          baseY: canvas.height / 2 + canvas.height * 0.1 + (Math.random() - 0.5) * 180,
+          baseY: canvas.height / 2 + canvas.height * 0.05 + (Math.random() - 0.5) * 360,
           offset: Math.random() * Math.PI * 2,
           size: Math.random() * 2 + 0.5,
           speedX: Math.random() * 0.3 - 0.15,
@@ -84,7 +84,7 @@ export function Waves() {
       gradient.addColorStop(1, `rgba(${color}, ${opacity * 0.3})`)
 
       ctx.strokeStyle = gradient
-      ctx.lineWidth = 3
+      ctx.lineWidth = 4
       ctx.shadowBlur = 20
       ctx.shadowColor = `rgba(${color}, ${opacity})`
       ctx.stroke()

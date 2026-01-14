@@ -2,6 +2,7 @@
 
 import { z } from "zod"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { Card, CardFooter } from "@/components/ui/card"
 import { CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { FormGroup } from "@/components/ui/form-group"
@@ -21,6 +22,7 @@ const formSchema = z.object({
 
 const Page = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const router = useRouter()
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -155,7 +157,7 @@ const Page = () => {
             <Button 
               type="button" 
               variant="outline" 
-              onClick={() => form.reset()}
+              onClick={() => router.back()}
               disabled={isSubmitting}
             >
               Cancel
