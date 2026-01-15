@@ -7,6 +7,7 @@ export interface projectData {
     url: string;
     github: string;
     image: string;
+    image2: string;
     alt: string;
     technologies: string[];
 }
@@ -20,23 +21,12 @@ export const projectData: projectData[] = [
         status: "Completed",
         url: "https://www.techsage.software",
         github: "https://github.com/zunigafran/techsagev2",
-        image: "",
+        image: "/projects/zunigafran-dark.png", 
+        image2: "/projects/zunigafran-light.png",
         alt: "Portfolio Site V2",
         technologies: ["NextJS", "TypeScript", "Cursor", "Claude", "Vercel"],
     }, 
     {
-       id: "lode",
-       name: "Lode",
-       purpose: "App Development",
-       summary: "A multi-layered budgeting application similar to YNAB or Origin, featuring AI-powered financial calculations for interest and amortized loans, along with personalized notebooks for tracking goals and milestones. Built with a custom AI model to enhance user financial planning.",
-       status: "In Progress",
-       github: "",
-       url: "",
-       image: "",
-       alt: "Lode",
-       technologies: ["Figma", "Expo", "TypeScript", "Cursor", "Claude"], //Supabase,
-   },
-   {
         id: "tanium-document",
         name: "Tanium Document",
         purpose: "Technical Documentation",
@@ -45,6 +35,7 @@ export const projectData: projectData[] = [
         url: "/projects/Tanium.pdf",
         github: "",
         image: "/projects/tanium_document.png",
+        image2: "",
         alt: "Tanium Document",
         technologies: ["Notion", "Word", "Spark"],
     },  
@@ -57,9 +48,23 @@ export const projectData: projectData[] = [
         url: "https://previousts.vercel.app",
         github: "https://github.com/zunigafran/zfran/tree/main/src",
         image: "/projects/techsagev1.jpeg",
+        image2: "",
         alt: "Previous Portfolio Site",
         technologies: ["NextJS", "JavaScript", "Claude", "Vercel"],
-    }
+    },
+    {
+       id: "lode",
+       name: "Lode",
+       purpose: "App Development",
+       summary: "A multi-layered budgeting application similar to YNAB or Origin, featuring AI-powered financial calculations for interest and amortized loans, along with personalized notebooks for tracking goals and milestones. Built with a custom AI model to enhance user financial planning.",
+       status: "In Progress",
+       github: "",
+       url: "",
+       image: "",
+       image2: "",
+       alt: "Lode",
+       technologies: ["Figma", "Expo", "TypeScript", "Cursor", "Claude"], //Supabase,
+   },
 ]
 
 // Template

@@ -2,11 +2,11 @@ import { projectData } from "@/data/projectData";
 import { notFound } from "next/navigation";
 import { languages } from "@/data/languages";
 import Link from "next/link";
-import Image from "next/image";
 import BackButton from "@/components/ui/backbutton";
 import { Card } from "@/components/ui/card";
 import { Metadata } from "next";
 import ProjectLinks from "@/components/ui/project-links";
+import ProjectImageRotator from "./project-image-rotator";
 
 export async function generateMetadata({
   params,
@@ -49,9 +49,13 @@ const nextProject = currentIndex < projectData.length - 1
   ? projectData[currentIndex + 1] 
   : projectData[0];
 
+  const primaryImage = project?.image?.trim() ?? "";
+  const secondaryImage = project?.image2?.trim() ?? "";
+  const hasAnyImage = Boolean(primaryImage || secondaryImage);
+
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="page-container gap-4 !h-auto">
+      <div className="page-container gap-4 !h-auto flex-1">
           <BackButton />
           <div className="flex flex-col gap-4">
             <h3 className="text-xl font-semibold">{project?.purpose}</h3>
@@ -81,14 +85,26 @@ const nextProject = currentIndex < projectData.length - 1
                   
                   return (
                     <div key={language.id} className="flex items-center gap-2 px-0">
-                      <Image 
-                        src={language.logo} 
-                        alt={language.alt}
+                      <div
+                        role="img"
+                        aria-label={language.alt}
                         title={language.alt}
-                        width={60}
-                        height={60}
-                        className="object-contain invert bg-secondary aspect-square p-2 rounded-lg"
-                      />
+                        className="bg-primary aspect-square p-2 rounded-lg"
+                      >
+                        <div
+                          className="h-[60px] w-[60px] bg-background"
+                          style={{
+                            maskImage: `url(${language.logo})`,
+                            WebkitMaskImage: `url(${language.logo})`,
+                            maskRepeat: "no-repeat",
+                            WebkitMaskRepeat: "no-repeat",
+                            maskPosition: "center",
+                            WebkitMaskPosition: "center",
+                            maskSize: "contain",
+                            WebkitMaskSize: "contain",
+                          }}
+                        />
+                      </div>
                     </div>
                   );
                 })}
@@ -97,8 +113,12 @@ const nextProject = currentIndex < projectData.length - 1
             {/* Project Links */}
             <ProjectLinks url={project?.url} github={project?.github} />
             </div>
-            {project?.image && project.image.trim() !== "" && (
-              <Image src={project.image} alt={project?.alt || project?.name || "Project image"} width={1000} height={1000} className="object-cover object-top col-span-2" />
+            {hasAnyImage && (
+              <ProjectImageRotator
+                image={primaryImage || secondaryImage}
+                image2={secondaryImage}
+                alt={project?.alt || project?.name || "Project image"}
+              />
             )}
 
             {/* Previous Project Card */}
