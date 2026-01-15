@@ -84,7 +84,7 @@ export function Waves() {
       gradient.addColorStop(1, `rgba(${color}, ${opacity * 0.3})`)
 
       ctx.strokeStyle = gradient
-      ctx.lineWidth = 4
+      ctx.lineWidth = 5
       ctx.shadowBlur = 20
       ctx.shadowColor = `rgba(${color}, ${opacity})`
       ctx.stroke()
@@ -102,14 +102,14 @@ export function Waves() {
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       // Draw multiple waves with theme-aware colors
-      drawWave(0, 80, 0.003, 0.4, "100, 150, 255", "150, 200, 255")
-      drawWave(1, 100, 0.0025, 0.3, "150, 200, 255", "180, 220, 255")
-      drawWave(2, 60, 0.004, 0.5, "200, 220, 255", "200, 230, 255")
-      drawWave(3, 90, 0.0035, 0.25, "180, 210, 255", "170, 210, 255")
-      drawWave(4, 70, 0.0028, 0.35, "120, 170, 255", "160, 200, 255")
-      drawWave(5, 110, 0.0032, 0.28, "160, 190, 255", "190, 220, 255")
-      drawWave(6, 50, 0.0045, 0.45, "190, 215, 255", "210, 235, 255")
-      drawWave(7, 95, 0.0038, 0.32, "140, 180, 255", "180, 210, 255")
+      drawWave(0, 80, 0.003, 0.4, "0, 0, 0", "255, 255, 255")
+      drawWave(1, 100, 0.0025, 0.3, "105, 105, 105", "220, 220, 220")
+      drawWave(2, 60, 0.004, 0.5, "15, 15, 15", "240, 240, 240")
+      drawWave(3, 90, 0.0035, 0.25, "90, 90, 90", "225, 225, 225")
+      drawWave(4, 70, 0.0028, 0.35, "30, 30, 30", "235, 235, 235")
+      drawWave(5, 110, 0.0032, 0.28, "75, 75, 75", "230, 230, 230")
+      drawWave(6, 50, 0.0045, 0.45, "45, 45, 45", "250, 250, 250")
+      drawWave(7, 95, 0.0038, 0.32, "60, 60, 60", "245, 245, 245")
 
       // Draw and update particles with theme-aware colors
       particlesRef.current.forEach((p) => {
