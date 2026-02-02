@@ -14,6 +14,19 @@ export interface projectData {
 
 export const projectData: projectData[] = [
     {
+        id: "ai-cloud-learning-assistant",
+        name: "AI Cloud Learning Assistant",
+        purpose: "AWS Development",
+        summary: "Built an AI-powered educational assistant using AWS serverless architecture (Lambda, S3, DynamoDB, API Gateway) integrated with Google's Gemini AI model and deployed to AWS Amplify with session tracking capabilities.",
+        status: "Completed",
+        url: "https://staging.d3axr2zqp7tcp4.amplifyapp.com/",
+        github: "",
+        image: "/projects/ai cloud learning assistant.png",
+        image2: "",
+        alt: "AI Cloud Learning Assistant",
+        technologies: ["AWS", "Gemini"],
+    },
+    {
         id: "portfolio-site2",
         name: "Portfolio Site V2",
         purpose: "Web Development",

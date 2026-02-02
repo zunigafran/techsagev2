@@ -33,7 +33,7 @@ export default function ProjectImageRotator({
   }, [images]);
 
   return (
-    <div className="relative col-span-2 w-full aspect-[9/16]">
+    <div className="relative col-span-2 w-full aspect-[1]">
       {images.map((source, imageIndex) => (
         <Image
           key={source}

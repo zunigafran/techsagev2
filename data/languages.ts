@@ -36,6 +36,12 @@ export const languages: Record<string, languages> = {
         color: "hsl(var(--primary))",
         alt: "Figma"
     },
+    "gemini": {
+        id: "gemini",
+        logo: "/logos/gemini.svg",
+        color: "hsl(var(--primary))",
+        alt: "Gemini"
+    },
     "javascript": {
         id: "javascript",
         logo: "/logos/javascript.svg",
