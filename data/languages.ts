@@ -48,6 +48,12 @@ export const languages: Record<string, languages> = {
         color: "hsl(var(--primary))",
         alt: "JavaScript"
     },
+    "lambda": {
+        id: "lambda",
+        logo: "/logos/lambda.svg",
+        color: "hsl(var(--primary))",
+        alt: "Lambda"
+    },
     "nextjs": {
         id: "nextjs",
         logo: "/logos/nextjs.svg",
